@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>frame benchmark — interactive-physics-sim</title>
+    <style>
+      body { font: 14px ui-monospace, monospace; margin: 24px; color: #111; }
+      #gameCanvas { border: 1px solid #ccc; width: 480px; height: 300px; }
+      #footer { height: 64px; }
+      table { border-collapse: collapse; margin-top: 16px; }
+      th, td { border: 1px solid #ddd; padding: 4px 10px; text-align: right; }
+      th { background: #f3f4f6; }
+      td:first-child, th:first-child { text-align: left; }
+      .over { color: #b91c1c; font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <h1>Frame benchmark</h1>
+    <p>
+      Times one fixed physics step and one full draw at a range of tuft and
+      particle counts. Budget at 120 Hz is 8.33 ms per step.
+    </p>
+    <canvas id="gameCanvas" width="960" height="600"></canvas>
+    <nav id="footer"></nav>
+    <span id="foundCount"></span>
+    <div id="out">running…</div>
+    <script type="module" src="./frame-bench.js"></script>
+  </body>
+</html>
